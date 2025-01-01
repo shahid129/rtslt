@@ -1,0 +1,20 @@
+# ignore sqlite
+db.sqlite3
+
+# Ignore python migration files
+*/migrations/*.py
+# include the __init__.py file
+!*/migrations/__init__.py
+
+# Ignore python virtual environment
+venv/
+
+# Compiled Python files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignore vscdoe and pytest cache
+.vscode/
+.pytest_cache
