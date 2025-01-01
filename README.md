@@ -67,6 +67,7 @@ Sign language is a crucial communication medium for the deaf and hard-of-hearing
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/shahid129/rtslt.git
+    cd rtslt
     ```
 
 2. **Create and activate a virtual environment**:
