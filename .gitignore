@@ -18,3 +18,5 @@ __pycache__/
 # Ignore vscdoe and pytest cache
 .vscode/
 .pytest_cache
+
+.DS_STORE
