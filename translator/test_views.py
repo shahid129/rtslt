@@ -9,7 +9,7 @@ def test_index_view(client):
     url = reverse("index")
     response = client.get(url)
     assert response.status_code == 200
-    assert b"<title>Index</title>" in response.content
+    assert b"<title>Home - Sign Language Translator</title>" in response.content
 
 
 # Test if the letter is returned correctly by get_detected_letter
