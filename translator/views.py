@@ -1,3 +1,4 @@
+import os
 import pickle
 import time
 
@@ -14,7 +15,16 @@ def index(request):
 
 
 # load the trained model from the pickle file
-with open("model.p", "rb") as model_file:
+# with open("model.p", "rb") as model_file:
+#     model_data = pickle.load(model_file)
+# hand_sign_model = model_data["model"]
+
+# project root directory
+# Go one level up
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+MODEL_PATH = os.path.join(PROJECT_DIR, "model.p")
+# load the trained model from the pickle file
+with open(MODEL_PATH, "rb") as model_file:
     model_data = pickle.load(model_file)
 hand_sign_model = model_data["model"]
 

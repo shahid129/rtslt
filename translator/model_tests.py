@@ -1,3 +1,4 @@
+import os
 import pickle
 
 import matplotlib.pyplot as plt
@@ -8,7 +9,18 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
 
 # load the dataset
-dataset = pd.read_csv("dataset.csv", header=None)
+# dataset = pd.read_csv("dataset.csv", header=None)
+
+
+# project root directory
+# Go one level up
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+# Load the data
+DATASET_PATH = os.path.join(PROJECT_DIR, "dataset.csv")
+
+# Load the data
+dataset = pd.read_csv(DATASET_PATH, header=None)
 # get all columns except the last one for features
 features = dataset.iloc[:, :-1].values
 # get the last column for labels
@@ -20,8 +32,15 @@ x_train, x_test, y_train, y_test = train_test_split(
     features, labels, test_size=0.2, shuffle=True, stratify=labels
 )
 
+# # load the trained model
+# with open("model.p", "rb") as model_file:
+#     model_data = pickle.load(model_file)
+# hand_sign_model = model_data["model"]
+
+
+MODEL_PATH = os.path.join(PROJECT_DIR, "model.p")
 # load the trained model
-with open("model.p", "rb") as model_file:
+with open(MODEL_PATH, "rb") as model_file:
     model_data = pickle.load(model_file)
 hand_sign_model = model_data["model"]
 

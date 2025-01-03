@@ -1,3 +1,4 @@
+import os
 import pickle
 
 import matplotlib.pyplot as plt
@@ -9,7 +10,18 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 
 # Load the data
-dataset = pd.read_csv("dataset.csv", header=None)
+# dataset = pd.read_csv("dataset.csv", header=None)
+
+
+# project root directory
+# Go one level up
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+# Load the data
+DATASET_PATH = os.path.join(PROJECT_DIR, "dataset.csv")
+
+# Load the data
+dataset = pd.read_csv(DATASET_PATH, header=None)
 # All columns except the last one
 features = dataset.iloc[:, :-1].values
 labels = dataset.iloc[:, -1].values
@@ -33,8 +45,16 @@ y_predict = model.predict(x_test)
 score = accuracy_score(y_predict, y_test)
 print(f"{score * 100:.2f}% of samples were classified correctly!")
 
-# save the model
-with open("model.p", "wb") as f:
+# # save the model
+# with open("model.p", "wb") as f:
+#     pickle.dump({"model": model}, f)
+
+
+# Path for saving the model in the project directory
+MODEL_PATH = os.path.join(PROJECT_DIR, "model.p")
+
+# Save the model
+with open(MODEL_PATH, "wb") as f:
     pickle.dump({"model": model}, f)
 
 

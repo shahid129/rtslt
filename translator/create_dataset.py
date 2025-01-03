@@ -7,8 +7,16 @@ import pandas as pd
 
 # all working
 
-IMAGE_DIR = "data"
-OUTPUT_CSV = "dataset.csv"
+# IMAGE_DIR = "data"
+# OUTPUT_CSV = "dataset.csv"
+
+# project root directory
+# Go one level up
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+# image directory and output CSV
+IMAGE_DIR = os.path.join(PROJECT_DIR, "data")
+OUTPUT_CSV = os.path.join(PROJECT_DIR, "dataset.csv")
 
 # Initialize hand for mediapipe
 mp_hands = mp.solutions.hands
