@@ -3,7 +3,6 @@
 
 {% block title %}Home - Sign Language Translator{% endblock %}
 
-<!-- friday -->
 
 {% block header %}
 Sign Language Translator
@@ -42,7 +41,8 @@ Sign Language Translator
             <div class="text-box">
                 <p><strong>Available hand signs</strong></p>
                 <a href="{% static 'images/real_time_sign_language_translator_sample1.jpg' %}" target="_blank">
-                    <img class="hand-sign-img" src="{% static 'images/real_time_sign_language_translator_sample1.jpg' %}" alt="Hand Signs">
+                    <img class="hand-sign-img"
+                        src="{% static 'images/real_time_sign_language_translator_sample1.jpg' %}" alt="Hand Signs">
                 </a>
             </div>
             <div class="text-box">
@@ -57,22 +57,19 @@ Sign Language Translator
     </div>
 </div>
 <p id="about" class="mt-3 text-muted">
-    <h2 class="text-muted">About Us</h2>
-    <p>Welcome to our Real Time Sign Language Translator</p>
-    <p class="small text-primary">The project is solely for learning & training purposes</p>
-    <p>
-        The Real-Time Sign Language Translator is a web application designed to bridge the communication gap between
-        individuals using sign language and those unfamiliar with it. Using computer vision and machine learning,
-        the application translates hand gestures from sign language into text in real time. This innovative tool aims to
-        enhance inclusivity and accessibility in communication.
-    </p>
+<h2 class="text-muted">About Us</h2>
+<p>Welcome to our Real Time Sign Language Translator</p>
+<p class="small text-primary">The project is solely for learning & training purposes</p>
+<p>
+    The Real-Time Sign Language Translator is a web application designed to bridge the communication gap between
+    individuals using sign language and those unfamiliar with it. Using computer vision and machine learning,
+    the application translates hand gestures from sign language into text in real time. This innovative tool aims to
+    enhance inclusivity and accessibility in communication.
+</p>
 
-    <p>Feel free to explore our application and see how it can help in recognizing hand signs in real-time. If you have
-        any questions or feedback, please don't hesitate to reach out to us.</p>
+<p>Feel free to explore our application and see how it can help in recognizing hand signs in real-time. If you have
+    any questions or feedback, please don't hesitate to reach out to us.</p>
 </div>
-
-
-<!-- sdfsdf -->
 
 <div id="urls" data-video-feed="{% url 'video_feed' %}" data-get-detected-letter="{% url 'get_detected_letter' %}"
     data-get-message="{% url 'get_message' %}" data-reset-message="{% url 'reset_message' %}"

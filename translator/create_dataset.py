@@ -5,11 +5,6 @@ import mediapipe as mp
 import numpy as np
 import pandas as pd
 
-# all working
-
-# IMAGE_DIR = "data"
-# OUTPUT_CSV = "dataset.csv"
-
 # project root directory
 # Go one level up
 PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))

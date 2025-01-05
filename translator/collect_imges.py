@@ -2,11 +2,6 @@ import os
 
 import cv2
 
-# # Directory to save the collected images
-# IMAGE_DIR = "./data"
-# if not os.path.exists(IMAGE_DIR):
-#     os.makedirs(IMAGE_DIR)
-
 # project root directory
 # Go one level up
 PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))

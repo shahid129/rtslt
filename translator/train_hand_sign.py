@@ -9,10 +9,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 
-# Load the data
-# dataset = pd.read_csv("dataset.csv", header=None)
-
-
 # project root directory
 # Go one level up
 PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -44,10 +40,6 @@ y_predict = model.predict(x_test)
 # calculate accuracy
 score = accuracy_score(y_predict, y_test)
 print(f"{score * 100:.2f}% of samples were classified correctly!")
-
-# # save the model
-# with open("model.p", "wb") as f:
-#     pickle.dump({"model": model}, f)
 
 
 # Path for saving the model in the project directory
