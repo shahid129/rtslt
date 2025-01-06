@@ -56,6 +56,15 @@ Sign language is a crucial communication medium for the deaf and hard-of-hearing
 
 ## Installation
 
+### Important Note
+PLEASE NOTE THAT YOU MIGHT GET AN ERROR WHILE CAPTURING THE VIDEO AND YOU MIGHT NEED TO CHANGE INDEX NUMBER FROM 1 TO 0 AS MY PC WAS INDEXED AT 1. FOLLOWING ARE THE FILES WITH LINE NUMBER
+
+| File               | Line Number | Code                                       |
+|--------------------|-------------|--------------------------------------------|
+| `collect_images.py` | 21          | `camera = cv2.VideoCapture(1)`             |
+| `views.py`          | 84          | `video_capture = cv2.VideoCapture(1)`      |
+
+
 ### Prerequisites
 
 - Python 3.9 or higher
